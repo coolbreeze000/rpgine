@@ -3,8 +3,6 @@
 {% block title %}RPGine Dices Dashboard{% endblock %}
 
 {% block head_css %}
-    {% load static %}<link rel="stylesheet" href="{% static "css/main.css" %}">
-    {% load static %}<link rel="stylesheet" href="{% static "css/dice.css" %}">
 {% endblock %}
 
 {% block head_script %}
@@ -12,13 +10,6 @@
 {% endblock %}
 
 {% block body %}
-<p>Test</p>
-<div class="control_panel">
-    <h6><img src="../favicon.ico" style="vertical-align: middle"></img> <a href="..">teal</a> dice</h6>
-    <p id="loading_text">Loading libraries, please wait a bit...</p>
-    <p id="info_text"><a href="http://www.teall.info/2014/01/online-3d-dice-roller.html">More info and help</a></p>
-    <p id="info_text"><a href="/mdice">Multiplayer version</a></p>
-</div>
 <div id="info_div" style="display: none">
     <div class="center_field">
         <span id="label"></span>
@@ -37,19 +28,19 @@
         </div>
     </div>
     <div class="center_field">
-        <input type="text" id="set" value="4d6"></input><br/>
+        {% csrf_token %}
+        <input type="text" id="set" value="10d10"/><br/>
         <button id="clear">clear</button>
         <button style="margin-left: 0.6em" id="throw">throw</button>
     </div>
 </div>
 <div id="canvas"></div>
-
-<script src="../libs/three.min.js"></script>
-<script src="../libs/cannon.min.js"></script>
-<script type="text/javascript" src="../teal.js"></script>
-<script type="text/javascript" src="dice.js"></script>
-<script type="text/javascript" src="main.js"></script>
-<script type="text/javascript" defer="defer">
-    dice_initialize(document.body);
-</script>
+    {% load static %}<script type="text/javascript" src="{% static "scripts/libs/three.min.js" %}"></script>
+    {% load static %}<script type="text/javascript" src="{% static "scripts/libs/cannon.min.js" %}"></script>
+    {% load static %}<script type="text/javascript" src="{% static "scripts/teal.js" %}"></script>
+    {% load static %}<script type="text/javascript" src="{% static "scripts/dice.js" %}"></script>
+    {% load static %}<script type="text/javascript" src="{% static "scripts/main.js" %}"></script>
+    <script type="text/javascript" defer="defer">
+        dice_initialize(document.body);
+    </script>
 {% endblock %}

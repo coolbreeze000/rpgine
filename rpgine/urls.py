@@ -20,5 +20,7 @@ from rpgine_coreapp_dices import views as coreapp_dices_views
 
 urlpatterns = [
     url(r'^$', coreapp_dices_views.dashboard),
+    url(r'^f$', coreapp_dices_views.roll),
+    url(r'^roll$', coreapp_dices_views.roll),
     url(r'^admin/', include(admin.site.urls)),
 ]

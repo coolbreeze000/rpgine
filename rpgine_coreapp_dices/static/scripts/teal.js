@@ -136,6 +136,7 @@ teal.rpc = function(params, callback) {
     ajax.onreadystatechange = function() {
         if (ajax.readyState == 4)
             callback.call(ajax, JSON.parse(ajax.responseText));
+            console.log(ajax.responseText);
     };
     ajax.send(JSON.stringify(params));
 }

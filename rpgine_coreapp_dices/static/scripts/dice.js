@@ -274,7 +274,7 @@
     this.ambient_light_color = 0xf0f5fb;
     this.spot_light_color = 0xefdfd5;
     this.selector_back_colors = { color: 0x404040, shininess: 0, emissive: 0x858787 };
-    this.desk_color = 0xdfdfdf;
+    this.desk_color = 0x89491d;
 
     this.known_types = ['d4', 'd6', 'd8', 'd10', 'd12', 'd20', 'd100'];
     this.dice_face_range = { 'd4': [1, 4], 'd6': [1, 6], 'd8': [1, 8], 'd10': [0, 9],
