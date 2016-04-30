@@ -10,6 +10,13 @@ Links: http://www.teall.info/2014/01/online-3d-dice-roller.html,
        http://www.teall.info/2014/07/multiplayer-3d-dice-roller.html
 ------------------------------------------------------------------------------------------------------------------------
 Additional Sources:
+
 Source: SystemRandom Random Generator
 Link: https://docs.python.org/2/library/random.html
+
+Source: cannon.js
+Link: https://github.com/schteppe/cannon.js
+
+Source: three.js
+Link: https://github.com/mrdoob/three.js/
 ------------------------------------------------------------------------------------------------------------------------
