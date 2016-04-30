@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rpgine_core',
+    'rpgine_coreapp_dices',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -97,8 +98,16 @@ USE_L10N = True
 
 USE_TZ = True
 
+TEMPLATE_STRING_IF_INVALID = 'TEMPLATE NAME ERROR'
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
+STATIC_ROOT = BASE_DIR
+STATICFILES_DIRS = (
+   STATIC_ROOT + '/static/',
+)
 STATIC_URL = '/static/'
+
+# LOGIN_REDIRECT_URL = '/dashboard/'

@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from rpgine_coreapp_dices import views as coreapp_dices_views
+
 urlpatterns = [
+    url(r'^$', coreapp_dices_views.dashboard),
     url(r'^admin/', include(admin.site.urls)),
 ]

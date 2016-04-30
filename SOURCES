@@ -1,0 +1,15 @@
+This file contains a list of external sources which have been used in the rpgine project and its relating apps.
+
+########################################################################################################################
+rpgine_coreapp_dices:
+########################################################################################################################
+------------------------------------------------------------------------------------------------------------------------
+Source: 3D dice roller
+Author Name: Anton Natarov
+Links: http://www.teall.info/2014/01/online-3d-dice-roller.html,
+       http://www.teall.info/2014/07/multiplayer-3d-dice-roller.html
+------------------------------------------------------------------------------------------------------------------------
+Additional Sources:
+Source: SystemRandom Random Generator
+Link: https://docs.python.org/2/library/random.html
+------------------------------------------------------------------------------------------------------------------------
