@@ -39,7 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rpgine_core',
-    'rpgine_coreapp_dices',
+    'rpgine_comapp_danceofdragons',
 )
 
 MIDDLEWARE_CLASSES = (

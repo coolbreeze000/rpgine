@@ -16,11 +16,17 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from rpgine_coreapp_dices import views as coreapp_dices_views
+from rpgine_core.views.dashboard import DashboardView as core_views_dashboard
 
 urlpatterns = [
-    url(r'^$', coreapp_dices_views.dashboard),
-    url(r'^f$', coreapp_dices_views.roll),
-    url(r'^roll$', coreapp_dices_views.roll),
-    url(r'^admin/', include(admin.site.urls)),
+    url(
+        regex=r'^$',
+        view=core_views_dashboard.as_view(),
+        name="dashboard"
+    ),
+    url(
+        regex=r'^admin/',
+        view=include(admin.site.urls),
+        name="admin"
+    ),
 ]
