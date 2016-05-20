@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RPGine</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"/>
+    <!--BOOTSTRAP CDN TO LOCAL FALLBACK TO ENABLE OFFLINE USAGE-->
+    <script>
+            $(document).ready(function()
+            {
+                var bodyColor = $('body').css('color');
+
+                if(bodyColor != 'rgb(51, 51, 51)')
+                {
+                    {% load static %}
+                    $("head").prepend('<link rel="stylesheet" href="{% static "css/libs/bootstrap.min.css" %}">');
+                }
+            });
+    </script>
+    <!--JQUERY CDN TO LOCAL FALLBACK TO ENABLE OFFLINE USAGE-->
+    {% load static %}
+    <script>window.jQuery || document.write('<script src="{% static "scripts/libs/jquery-2.2.4.min.js" %}"><\/script>')</script>
+
+    {% block head %}
+        <!--CUSTOM HEAD CONTENT-->
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+        <!--CUSTOM BODY CONTENT-->
+    {% endblock %}
+</body>
+</html>
