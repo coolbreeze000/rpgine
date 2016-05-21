@@ -1,0 +1,3 @@
+issue the following commands in docker cli:
+
+docker-compose up
