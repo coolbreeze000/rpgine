@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
+# import django mongodb drivers
+import mongoengine
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -20,7 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+
+# TODO replace SECRET_KEY
 # THIS KEY SHOULD ONLY BE USED FOR TESTING PURPOSES!!! THIS KEY WILL SHOULD BE REPLACES IN PRODUCTION ENVIRONMENTS!!!
+
 SECRET_KEY = '6^+ajhhl64h8=g*55$mt5(t$g84om1u(egwd2uprgflp%@w$er'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -77,6 +83,16 @@ WSGI_APPLICATION = 'rpgine.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
+# http://staltz.com/djangoconfi-mongoengine/#/15
+
+# TODO uncomment to enable mongodb in general
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': '',
+    }
+}
+"""
 
 DATABASES = {
     'default': {
@@ -85,6 +101,26 @@ DATABASES = {
     }
 }
 
+
+# TODO uncomment to enable mongodb session backend --> should later be moved to redis
+"""
+SESSION_ENGINE = 'mongoengine.django.sessions' # optional
+"""
+
+# TODO uncomment to implement django integration with mongodb
+"""
+MONGODB_USER = 'rpgine'
+MONGODB_PASSWD = 'rpgine'
+MONGODB_HOST = 'localhost'
+MONGODB_NAME = 'rpgine'
+MONGODB_DATABASE_HOST = 'mongodb://%s:%s@%s/%s' % (MONGODB_USER, MONGODB_PASSWD, MONGODB_HOST, MONGODB_NAME)
+
+mongoengine.connect(MONGODB_NAME, host=MONGODB_DATABASE_HOST)
+
+AUTHENTICATION_BACKENDS = (
+    'mongoengine.django.auth.MongoEngineBackend',
+)
+"""
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/

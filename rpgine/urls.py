@@ -17,12 +17,23 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 from rpgine_core.views.dashboard import DashboardView as core_views_dashboard
+from rpgine_comapp_danceofdragons.views.dashboard import DashboardView as danceofdragons_views_dashboard
 
 urlpatterns = [
     url(
         regex=r'^$',
         view=core_views_dashboard.as_view(),
         name="dashboard"
+    ),
+    url(
+        regex=r'^dashboard/',
+        view=core_views_dashboard.as_view(),
+        name="dashboard"
+    ),
+    url(
+        regex=r'^dod-dashboard/',
+        view=danceofdragons_views_dashboard.as_view(),
+        name="dod-dashboard"
     ),
     url(
         regex=r'^admin/',
