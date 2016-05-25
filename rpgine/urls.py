@@ -17,8 +17,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
-from rpgine_core.views.dashboard import DashboardView as core_views_dashboard
-from rpgine_comapp_danceofdragons.views.dashboard_view import DashboardDicerRollerView as danceofdragons_views_dashboard_diceroller
+from rpgine_comapp_danceofdragons.views.DashboardView import DashboardDicerRollerView as danceofdragons_views_dashboard_diceroller
 
 urlpatterns = [
     url(
