@@ -60,10 +60,10 @@ target/
 .idea/
 
 # LOCAL RPGINE CORE SETTINGS
-rpgine_core/conf/
+.rpgine_core/conf/
 
 # LOCAL DJANGO DEFAULT DATABASE
 db.sqlite3
 
 # PRIVATE MAPS
-rpgine_comapp_danceofdragons/static/danceofdragons/media/maps/private/
+.rpgine_comapp_danceofdragons/static/danceofdragons/media/maps/private/
