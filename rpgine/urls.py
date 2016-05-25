@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 
 from rpgine_core.views.dashboard import DashboardView as core_views_dashboard
 from rpgine_comapp_danceofdragons.views.dashboard_view import DashboardDicerRollerView as danceofdragons_views_dashboard_diceroller
@@ -24,6 +25,16 @@ urlpatterns = [
         regex=r'^$',
         view=danceofdragons_views_dashboard_diceroller.as_view(),
         name="dashboard"
+    ),
+    url(
+        regex=r'^login/',
+        view=include(auth_views.login, {'template_name': 'login.html'}),
+        name="admin"
+    ),
+    url(
+        regex=r'^logout/',
+        view=include(auth_views.login, {'template_name': 'logout.html'}),
+        name="admin"
     ),
     url(
         regex=r'^dance-of-dragons/dashboard/',

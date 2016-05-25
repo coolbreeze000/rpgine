@@ -86,21 +86,20 @@ WSGI_APPLICATION = 'rpgine.wsgi.application'
 # http://staltz.com/djangoconfi-mongoengine/#/15
 
 # TODO uncomment to enable mongodb in general
-"""
 DATABASES = {
     'default': {
         'ENGINE': '',
     }
 }
-"""
 
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
+"""
 
 # TODO uncomment to enable mongodb session backend --> should later be moved to redis
 """
@@ -108,10 +107,9 @@ SESSION_ENGINE = 'mongoengine.django.sessions' # optional
 """
 
 # TODO uncomment to implement django integration with mongodb
-"""
-MONGODB_USER = 'rpgine'
-MONGODB_PASSWD = 'rpgine'
-MONGODB_HOST = 'localhost'
+MONGODB_USER = 'admin'
+MONGODB_PASSWD = 'admin'
+MONGODB_HOST = '192.168.99.100' #boot2docker
 MONGODB_NAME = 'rpgine'
 MONGODB_DATABASE_HOST = 'mongodb://%s:%s@%s/%s' % (MONGODB_USER, MONGODB_PASSWD, MONGODB_HOST, MONGODB_NAME)
 
@@ -120,7 +118,6 @@ mongoengine.connect(MONGODB_NAME, host=MONGODB_DATABASE_HOST)
 AUTHENTICATION_BACKENDS = (
     'mongoengine.django.auth.MongoEngineBackend',
 )
-"""
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
