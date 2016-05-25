@@ -1,0 +1,16 @@
+{% extends 'dashboard.html' %}
+{% block sidebar %}
+    <li role="presentation" class="active"><a href="#">Dicer Roller</a></li>
+    <li role="presentation" ><a href="#">Fighting</a></li>
+    <li role="presentation" ><a href="#">Economy</a></li>
+    <li role="presentation" ><a href="#">Espionage</a></li>
+    <li role="presentation" ><a href="#">Relationships</a></li>
+    <li role="presentation" ><a href="#">Pinboard</a></li>
+    <li role="presentation" ><a href="#">Maps</a></li>
+{% endblock %}
+
+{% block tabbar %}
+    <li role="presentation" class="{% if request.path == '/' or 'simple-rolls' in request.path %}active{% endif %}"><a href="#">Simple Rolls</a></li>
+    <li role="presentation" class="{% if 'extended-rolls' in request.path %}active{% endif %}"><a href="#">Extended Rolls</a></li>
+    <li role="presentation" class="{% if 'contested-rolls' in request.path %}active{% endif %}"><a href="#">Contested Rolls</a></li>
+{%  endblock %}

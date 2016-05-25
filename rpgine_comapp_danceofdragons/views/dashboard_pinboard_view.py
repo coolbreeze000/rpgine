@@ -3,6 +3,6 @@ from django.views.generic import View
 
 # Create your views here.
 
-class DashboardView(View):
+class DashboardPinboardView(View):
     def get(self, request):
-        return render(request, 'core/../templates/dashboard.html')
+        return render(request, 'danceofdragons/pinboard.html')

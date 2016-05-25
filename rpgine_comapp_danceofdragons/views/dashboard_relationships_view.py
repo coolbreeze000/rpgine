@@ -3,6 +3,6 @@ from django.views.generic import View
 
 # Create your views here.
 
-class DashboardView(View):
+class DashboardRelationshipsView(View):
     def get(self, request):
-        return render(request, 'dashboard.html')
+        return render(request, 'danceofdragons/relationships.html')

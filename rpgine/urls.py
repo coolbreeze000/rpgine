@@ -22,6 +22,24 @@ from rpgine_comapp_danceofdragons.views.dashboard import DashboardView as danceo
 urlpatterns = [
     url(
         regex=r'^$',
+        view=danceofdragons_views_dashboard.as_view(),
+        name="dashboard"
+    ),
+    url(
+        regex=r'^dance-of-dragons/dashboard/',
+        view=danceofdragons_views_dashboard.as_view(),
+        name="dashboard"
+    ),
+    url(
+        regex=r'^admin/',
+        view=include(admin.site.urls),
+        name="admin"
+    ),
+]
+
+"""
+    url(
+        regex=r'^$',
         view=core_views_dashboard.as_view(),
         name="dashboard"
     ),
@@ -30,14 +48,4 @@ urlpatterns = [
         view=core_views_dashboard.as_view(),
         name="dashboard"
     ),
-    url(
-        regex=r'^dod-dashboard/',
-        view=danceofdragons_views_dashboard.as_view(),
-        name="dod-dashboard"
-    ),
-    url(
-        regex=r'^admin/',
-        view=include(admin.site.urls),
-        name="admin"
-    ),
-]
+"""
