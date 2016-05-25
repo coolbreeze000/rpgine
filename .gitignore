@@ -60,7 +60,7 @@ target/
 .idea/
 
 # LOCAL RPGINE CORE SETTINGS
-rpgine_core/conf/*
+#rpgine_core/conf/*
 
 # LOCAL DJANGO DEFAULT DATABASE
 db.sqlite3
