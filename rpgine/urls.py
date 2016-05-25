@@ -17,12 +17,12 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
-from rpgine_comapp_danceofdragons.views.DashboardView import DashboardDicerRollerView as danceofdragons_views_dashboard_diceroller
+from rpgine_comapp_danceofdragons.views.DashboardView import DashboardView as danceofdragons_views_dashboard
 
 urlpatterns = [
     url(
         regex=r'^$',
-        view=danceofdragons_views_dashboard_diceroller.as_view(),
+        view=danceofdragons_views_dashboard.as_view(),
         name="dashboard"
     ),
     url(
@@ -37,7 +37,7 @@ urlpatterns = [
     ),
     url(
         regex=r'^dance-of-dragons/dashboard/',
-        view=danceofdragons_views_dashboard_diceroller.as_view(),
+        view=danceofdragons_views_dashboard.as_view(),
         name="dashboard"
     ),
     url(
