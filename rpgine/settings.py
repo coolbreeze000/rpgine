@@ -59,6 +59,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
+#'django.middleware.cache.UpdateCacheMiddleware',    # This must be first on the list
+#'django.middleware.cache.FetchFromCacheMiddleware', # This must be last
+
 ROOT_URLCONF = 'rpgine.urls'
 
 TEMPLATES = [
@@ -74,7 +77,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'string_if_invalid': 'INVALID EXPRESSION: %s',
         },
+        'TEMPLATE_STRING_IF_INVALID': 'TEMPLATE NAME ERROR',
     },
 ]
 
@@ -86,9 +91,18 @@ WSGI_APPLICATION = 'rpgine.wsgi.application'
 # http://staltz.com/djangoconfi-mongoengine/#/15
 
 # TODO uncomment to enable mongodb in general
+
+"""
 DATABASES = {
     'default': {
         'ENGINE': '',
+    }
+}
+"""
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.dummy',
     }
 }
 
@@ -102,8 +116,24 @@ DATABASES = {
 """
 
 # TODO uncomment to enable mongodb session backend --> should later be moved to redis
-"""
 SESSION_ENGINE = 'mongoengine.django.sessions' # optional
+#SESSION_ENGINE = 'django.contrib.sessions.backends.cache' # optional
+
+"""
+CACHES = {
+    'default': {
+        'BACKEND': 'redis_cache.RedisCache',
+        'LOCATION': '192.168.99.100:6379',
+        'OPTIONS': {
+            'DB': 1,
+            'PARSER_CLASS': 'redis.connection.HiredisParser',
+            'CONNECTION_POOL_CLASS': 'redis.BlockingConnectionPool',
+            'PICKLE_VERSION': -1,
+        },
+    },
+}
+
+#            'PASSWORD': 'yadayada',
 """
 
 # TODO uncomment to implement django integration with mongodb
@@ -132,8 +162,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-TEMPLATE_STRING_IF_INVALID = 'TEMPLATE NAME ERROR'
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
@@ -144,4 +172,4 @@ STATICFILES_DIRS = (
 )
 STATIC_URL = '/static/'
 
-# LOGIN_REDIRECT_URL = '/dashboard/'
+LOGIN_REDIRECT_URL = '/dashboard/'

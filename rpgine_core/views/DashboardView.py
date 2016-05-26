@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from django.views.generic import View
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
-@login_required(login_url='/login/', redirect_field_name=None)
-class DashboardView(View):
+class DashboardView(LoginRequiredMixin, View):
+    login_url = '/login/'
+    redirect_field_name = 'None'
+
     def get(self, request):
         return render(request, 'core/../templates/dashboard.html')
