@@ -14,7 +14,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 
 # import django mongodb drivers
-import mongoengine
+# import mongoengine
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -100,11 +100,13 @@ DATABASES = {
 }
 """
 
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.dummy',
     }
 }
+"""
 
 """
 DATABASES = {
@@ -116,7 +118,7 @@ DATABASES = {
 """
 
 # TODO uncomment to enable mongodb session backend --> should later be moved to redis
-SESSION_ENGINE = 'mongoengine.django.sessions' # optional
+#SESSION_ENGINE = 'mongoengine.django.sessions' # optional
 #SESSION_ENGINE = 'django.contrib.sessions.backends.cache' # optional
 
 """
@@ -137,6 +139,7 @@ CACHES = {
 """
 
 # TODO uncomment to implement django integration with mongodb
+"""
 MONGODB_USER = 'admin'
 MONGODB_PASSWD = 'admin'
 MONGODB_HOST = '192.168.99.100' #boot2docker
@@ -148,6 +151,7 @@ mongoengine.connect(MONGODB_NAME, host=MONGODB_DATABASE_HOST)
 AUTHENTICATION_BACKENDS = (
     'mongoengine.django.auth.MongoEngineBackend',
 )
+"""
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
