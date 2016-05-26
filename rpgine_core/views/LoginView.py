@@ -7,9 +7,6 @@ from django.views.generic import View
 from django.contrib.auth import login, logout
 
 class LoginView(View):
-    def get(self, request):
-        return render(request, 'login.html')
-
     def login(request):
         logout(request)
 

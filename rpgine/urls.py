@@ -52,6 +52,18 @@ urlpatterns = [
 """
     url(
         regex=r'^login/',
+        view=rpginecore_views_login.as_view(),
+        name="admin"
+    ),
+    url(
+        regex=r'^logout/',
+        view=rpginecore_views_logout.as_view(),
+        name="admin"
+    ),
+
+
+    url(
+        regex=r'^login/',
         view=include(auth_views.login, {'template_name': 'login.html'}),
         name="admin"
     ),
