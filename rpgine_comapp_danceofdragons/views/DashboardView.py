@@ -6,7 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 class DashboardView(LoginRequiredMixin, View):
     login_url = '/login/'
-    redirect_field_name = 'None'
+    redirect_field_name = 'redirect_to'
 
     def get(self, request):
         return render(request, 'danceofdragons/diceroller.html')

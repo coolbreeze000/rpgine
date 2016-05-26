@@ -9,4 +9,4 @@ class DashboardView(LoginRequiredMixin, View):
     redirect_field_name = 'None'
 
     def get(self, request):
-        return render(request, 'core/../templates/dashboard.html')
+        return render(request, 'dashboard.html')

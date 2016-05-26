@@ -17,6 +17,8 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
+from rpgine_core.views.LoginView import LoginView as rpginecore_views_login
+from rpgine_core.views.LogoutView import LogoutView as rpginecore_views_logout
 from rpgine_comapp_danceofdragons.views.DashboardView import DashboardView as danceofdragons_views_dashboard
 
 urlpatterns = [
@@ -27,12 +29,12 @@ urlpatterns = [
     ),
     url(
         regex=r'^login/',
-        view=include(auth_views.login, {'template_name': 'login.html'}),
+        view=rpginecore_views_login.as_view(),
         name="admin"
     ),
     url(
         regex=r'^logout/',
-        view=include(auth_views.login, {'template_name': 'logout.html'}),
+        view=rpginecore_views_logout.as_view(),
         name="admin"
     ),
     url(
