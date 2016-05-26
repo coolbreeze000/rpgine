@@ -3,14 +3,22 @@ from django.shortcuts import redirect
 from rpgine_core.views.LogoutView import logout
 from rpgine_core.forms.LoginForm import LoginForm
 
-def login(request):
-    logout(request)
+from django.shortcuts import render
+from django.views.generic import View
+from django.contrib.auth import authenticate, login, logout
 
-    form = LoginForm(request.POST or None)
+class DashboardView(View):
+    def get(self, request):
+        return render(request, 'core/../templates/login.html')
 
-    if request.POST and form.is_valid():
-        user = form.login(request)
+    def login(request):
+        logout(request)
 
-        if user is not None:
-            login(request, user)
-            redirect('dashboard')
+        form = LoginForm(request.POST or None)
+
+        if request.POST and form.is_valid():
+            user = form.login(request)
+
+            if user is not None:
+                login(request, user)
+                redirect('dashboard')

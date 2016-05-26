@@ -27,7 +27,12 @@ urlpatterns = [
     ),
     url(
         regex=r'^login/',
-        view=auth_views.login,
+        view=include(auth_views.login, {'template_name': 'login.html'}),
+        name="admin"
+    ),
+    url(
+        regex=r'^logout/',
+        view=include(auth_views.login, {'template_name': 'logout.html'}),
         name="admin"
     ),
     url(
