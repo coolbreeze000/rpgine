@@ -79,7 +79,6 @@ TEMPLATES = [
             ],
             'string_if_invalid': 'INVALID EXPRESSION: %s',
         },
-        'TEMPLATE_STRING_IF_INVALID': 'TEMPLATE NAME ERROR',
     },
 ]
 

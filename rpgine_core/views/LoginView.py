@@ -1,12 +1,14 @@
 from django.shortcuts import redirect
 
 from rpgine_core.forms.LoginForm import LoginForm
-
-from django.shortcuts import render
-from django.views.generic import View
+from django.views.generic.edit import FormView
 from django.contrib.auth import login, logout
 
-class LoginView(View):
+class LoginView(FormView):
+    template_name = "login.html"
+    form_class = LoginForm
+    success_url = 'dashboard.html'
+
     def login(request):
         logout(request)
 

@@ -30,12 +30,12 @@ urlpatterns = [
     url(
         regex=r'^login/',
         view=rpginecore_views_login.as_view(),
-        name="admin"
+        name="login"
     ),
     url(
         regex=r'^logout/',
         view=rpginecore_views_logout.as_view(),
-        name="admin"
+        name="logout"
     ),
     url(
         regex=r'^dance-of-dragons/dashboard/',

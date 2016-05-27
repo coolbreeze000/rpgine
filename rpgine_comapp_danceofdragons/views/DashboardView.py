@@ -7,9 +7,5 @@ from braces.views import LoginRequiredMixin
 # Create your views here.
 
 class DashboardView(LoginRequiredMixin, TemplateView):
-    template_name = "login.html"
+    template_name = "danceofdragons/diceroller.html"
     login_url = '/login/'
-    redirect_field_name = 'redirect_to'
-
-    def get(self, request):
-        return render(request, 'danceofdragons/diceroller.html')
