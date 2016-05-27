@@ -11,3 +11,4 @@ from django.views.generic import TemplateView
 class DashboardDiceRollerView(LoginRequiredMixin, TemplateView):
     template_name = "danceofdragons/diceroller.html"
     login_url = '/login/'
+    redirect_field_name = 'redirect_to'

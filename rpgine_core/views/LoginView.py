@@ -7,7 +7,7 @@ from django.contrib.auth import login, logout
 class LoginView(FormView):
     template_name = "login.html"
     form_class = LoginForm
-    success_url = 'dashboard.html'
+    success_url = '/dance-of-dragons/dashboard/'
 
     def login(request):
         logout(request)
