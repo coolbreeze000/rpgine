@@ -20,6 +20,7 @@ from django.contrib.auth import views as auth_views
 from rpgine_core.views.LoginView import LoginView as rpginecore_views_login
 from rpgine_core.views.LogoutView import LogoutView as rpginecore_views_logout
 from rpgine_comapp_danceofdragons.views.DashboardView import DashboardView as danceofdragons_views_dashboard
+from rpgine_comapp_danceofdragons.views.DashboardDiceRollerView import DashboardDiceRollerView as danceofdragons_views_dashboarddiceroller
 
 urlpatterns = [
     url(
@@ -38,9 +39,29 @@ urlpatterns = [
         name="logout"
     ),
     url(
+        regex=r'^dance-of-dragons/',
+        view=danceofdragons_views_dashboard.as_view(),
+        name="dashboard"
+    ),
+    url(
         regex=r'^dance-of-dragons/dashboard/',
         view=danceofdragons_views_dashboard.as_view(),
         name="dashboard"
+    ),
+    url(
+        regex=r'^dance-of-dragons/contested-rolls/',
+        view=danceofdragons_views_dashboarddiceroller.as_view(),
+        name="simple-rolls"
+    ),
+    url(
+        regex=r'^dance-of-dragons/contested-rolls/',
+        view=danceofdragons_views_dashboarddiceroller.as_view(),
+        name="extended-rolls"
+    ),
+    url(
+        regex=r'^dance-of-dragons/contested-rolls/',
+        view=danceofdragons_views_dashboarddiceroller.as_view(),
+        name="contested-rolls"
     ),
     url(
         regex=r'^admin/',

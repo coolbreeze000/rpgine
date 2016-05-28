@@ -1,4 +1,4 @@
-{% extends 'core/../base.html' %}
+{% extends 'base.html' %}
 
 {% block head_js_remote_cdn %}{% endblock %}
 
@@ -28,10 +28,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="dropdown active">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% block body_navbar-nav_module_active %}Core{% endblock %}<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li class="active"><a href="#">Core</a></li>
-            <li><a href="#">Dance of Dragons</a></li>
+            <li class="{% if '/' or 'core' in request.path %}active{% endif %}"><a href="#">Core</a></li>
+            <li class="{% if 'dance-of-dragons' in request.path %}active{% endif %}"><a href="#">Dance of Dragons</a></li>
           </ul>
         </li>
       </ul>

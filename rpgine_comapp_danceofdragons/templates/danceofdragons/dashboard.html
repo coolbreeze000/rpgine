@@ -1,4 +1,17 @@
 {% extends 'dashboard.html' %}
+
+{% block head_js_local %}
+    {% load static %}<script src="{% static "scripts/libs/sidebar.js" %}"></script>
+    {% load static %}<script src="{% static "danceofdragons/scripts/dashboard.js" %}"></script>
+{% endblock %}
+
+{% block head_css_local %}
+    {% load static %}<link rel="stylesheet" href="{% static "danceofdragons/css/dashboard.css" %}">
+    {% load static %}<link rel="stylesheet" href="{% static "danceofdragons/css/libs/sidebar.css" %}">
+{% endblock %}
+
+{% block body_navbar-nav_module_active %}Dance of Dragons{% endblock %}
+
 {% block sidebar %}
     <li role="presentation" class="active"><a href="#">Dicer Roller</a></li>
     <li role="presentation" ><a href="#">Fighting</a></li>
@@ -9,8 +22,3 @@
     <li role="presentation" ><a href="#">Maps</a></li>
 {% endblock %}
 
-{% block tabbar %}
-    <li role="presentation" class="{% if request.path == '/' or 'simple-rolls' in request.path %}active{% endif %}"><a href="#">Simple Rolls</a></li>
-    <li role="presentation" class="{% if 'extended-rolls' in request.path %}active{% endif %}"><a href="#">Extended Rolls</a></li>
-    <li role="presentation" class="{% if 'contested-rolls' in request.path %}active{% endif %}"><a href="#">Contested Rolls</a></li>
-{%  endblock %}
