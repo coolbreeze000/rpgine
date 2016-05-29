@@ -45,67 +45,67 @@ urlpatterns = [
         name="logout"
     ),
     url(
-        regex=r'^dance-of-dragons/',
+        regex=r'^dance-of-dragons/$',
         view=danceofdragons_views_dashboard.as_view(),
         name="dashboard"
     ),
     url(
-        regex=r'^dance-of-dragons/dashboard/',
+        regex=r'^dance-of-dragons/dashboard/$',
         view=danceofdragons_views_dashboard.as_view(),
         name="dashboard"
     ),
     url(
-        regex=r'^dance-of-dragons/dice-roller/',
+        regex=r'^dance-of-dragons/dice-roller/$',
         view=danceofdragons_views_dashboarddiceroller.as_view(),
         name="simple-rolls"
     ),
     url(
-        regex=r'^dance-of-dragons/dice-roller/contested-rolls/',
+        regex=r'^dance-of-dragons/dice-roller/simple-rolls/$',
         view=danceofdragons_views_dashboarddiceroller.as_view(),
         name="simple-rolls"
     ),
     url(
-        regex=r'^dance-of-dragons/dice-roller/contested-rolls/',
+        regex=r'^dance-of-dragons/dice-roller/extended-rolls/$',
         view=danceofdragons_views_dashboarddiceroller.as_view(),
         name="extended-rolls"
     ),
     url(
-        regex=r'^dance-of-dragons/dice-roller/contested-rolls/',
+        regex=r'^dance-of-dragons/dice-roller/contested-rolls/$',
         view=danceofdragons_views_dashboarddiceroller.as_view(),
         name="contested-rolls"
     ),
     url(
-        regex=r'^dance-of-dragons/fighting/',
+        regex=r'^dance-of-dragons/fighting/$',
         view=danceofdragons_views_dashboardfighting.as_view(),
         name="fighting"
     ),
     url(
-        regex=r'^dance-of-dragons/economy/',
+        regex=r'^dance-of-dragons/economy/$',
         view=danceofdragons_views_dashboardeconomy.as_view(),
         name="economy"
     ),
     url(
-        regex=r'^dance-of-dragons/espionage/',
+        regex=r'^dance-of-dragons/espionage/$',
         view=danceofdragons_views_dashboardespionage.as_view(),
         name="espionage"
     ),
     url(
-        regex=r'^dance-of-dragons/relationships/',
+        regex=r'^dance-of-dragons/relationships/$',
         view=danceofdragons_views_dashboardrelationships.as_view(),
         name="fighting"
     ),
     url(
-        regex=r'^dance-of-dragons/pinboard/',
+        regex=r'^dance-of-dragons/pinboard/$',
         view=danceofdragons_views_dashboardpinboard.as_view(),
         name="economy"
     ),
     url(
-        regex=r'^dance-of-dragons/maps/',
+        regex=r'^dance-of-dragons/maps/$',
         view=danceofdragons_views_dashboardmaps.as_view(),
         name="espionage"
     ),
     url(
-        regex=r'^admin/',
+        regex=r'^admin/$',
         view=include(admin.site.urls),
         name="admin"
     ),
