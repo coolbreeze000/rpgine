@@ -105,7 +105,7 @@ urlpatterns = [
         name="espionage"
     ),
     url(
-        regex=r'^admin/$',
+        regex=r'^admin/',
         view=include(admin.site.urls),
         name="admin"
     ),
