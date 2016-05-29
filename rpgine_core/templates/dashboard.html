@@ -42,9 +42,13 @@
           <input type="text" class="form-control" placeholder="Search">
         </div>
       </form>
-          {% load static %}
           <li><a href="#"><span class="glyphicon glyphicon glyphicon-cog gi-1_5x"></span></a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-user gi-1_5x"></span></a></li>
+          <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><a href="#"><span class="glyphicon glyphicon-user gi-1_5x"></span></a></a>
+              <ul class="dropdown-menu">
+                <li class=""><a href="{% url 'logout' %}">Logout</a></li>
+              </ul>
+          </li>
       </ul>
     </div>
   </div>

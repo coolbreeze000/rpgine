@@ -1,22 +1,27 @@
-from django.shortcuts import redirect
-
 from rpgine_core.forms.LoginForm import LoginForm
 from django.views.generic.edit import FormView
-from django.contrib.auth import login, logout
+from django.contrib.auth import login
+from django.shortcuts import redirect
+from braces.views import AnonymousRequiredMixin
 
-class LoginView(FormView):
+class LoginView(AnonymousRequiredMixin, FormView):
     template_name = "login.html"
     form_class = LoginForm
     success_url = '/dance-of-dragons/dashboard/'
 
-    def login(request):
-        logout(request)
+    def get_authenticated_redirect_url(self):
+        return self.success_url
 
-        form = LoginForm(request.POST or None)
+    def form_valid(self, form):
+        print("Invalid Login Credentials from User: " + form.get_user().get_username())
+        login(self.request, form.get_user())
 
-        if request.POST and form.is_valid():
-            user = form.login(request)
+        if form.get_user().is_authenticated():
+            print("Successful login to RPGine from User: " + form.get_user().get_username())
 
-            if user is not None:
-                login(request, user)
-                redirect('dashboard')
+        return super(LoginView, self).form_valid(form)
+
+    def form_invalid(self, form):
+        print("Invalid Login Credentials from User")
+
+        return super(LoginView, self).form_valid(form)

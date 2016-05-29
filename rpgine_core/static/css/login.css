@@ -6,7 +6,7 @@
     margin: 0 auto;
 }
 #login h1 {
-    color: #000000;
+    color: #222222;
     font-size: 18px;
     text-align: center;
     font-weight: bold;
@@ -29,7 +29,7 @@
 }
 #login .checkbox.show:before {
     content: '\e013';
-    color: #000000;
+    color: #222222;
     font-size: 17px;
     margin: 1px 0 0 3px;
     position: absolute;
@@ -41,12 +41,12 @@
     height: 25px;
     cursor: pointer;
     border-radius: 3px;
-    border: 1px solid #000000;
+    border: 1px solid #222222;
     vertical-align: middle;
     display: inline-block;
 }
 #login .checkbox .label {
-    color: #000000;
+    color: #222222;
     font-size: 13px;
     font-weight: normal;
 }
@@ -61,11 +61,11 @@
 }
 
 .form-control {
-    color: #212121;
+    color: #222222;
 }
 .btn-custom {
     color: #fff;
-    background-color: #000000;
+    background-color: #222222;
 }
 
 .btn-default {

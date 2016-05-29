@@ -1,0 +1,12 @@
+{% extends 'danceofdragons/dashboard.html' %}
+
+{% block tabbar %}
+    <li role="presentation" class="{% if request.path == '/' or 'simple-rolls' in request.path %}active{% endif %}"><a href="/dance-of-dragons/dice-roller/simple-rolls">Simple Rolls</a></li>
+    <li role="presentation" class="{% if 'extended-rolls' in request.path %}active{% endif %}"><a href="/dance-of-dragons/dice-roller/extended-rolls">Extended Rolls</a></li>
+    <li role="presentation" class="{% if 'contested-rolls' in request.path %}active{% endif %}"><a href="/dance-of-dragons/dice-roller/contested-rolls">Contested Rolls</a></li>
+{%  endblock %}
+
+{% block body_content %}
+    <h1>Simple Rolls</h1>
+    <p>This page provides simple rolls!</p>
+{% endblock %}

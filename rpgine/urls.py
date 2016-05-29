@@ -21,6 +21,12 @@ from rpgine_core.views.LoginView import LoginView as rpginecore_views_login
 from rpgine_core.views.LogoutView import LogoutView as rpginecore_views_logout
 from rpgine_comapp_danceofdragons.views.DashboardView import DashboardView as danceofdragons_views_dashboard
 from rpgine_comapp_danceofdragons.views.DashboardDiceRollerView import DashboardDiceRollerView as danceofdragons_views_dashboarddiceroller
+from rpgine_comapp_danceofdragons.views.DashboardFightingView import DashboardFightingView as danceofdragons_views_dashboardfighting
+from rpgine_comapp_danceofdragons.views.DashboardEconomyView import DashboardEconomyView as danceofdragons_views_dashboardeconomy
+from rpgine_comapp_danceofdragons.views.DashboardEspionageView import DashboardEspionageView as danceofdragons_views_dashboardespionage
+from rpgine_comapp_danceofdragons.views.DashboardRelationshipsView import DashboardRelationshipsView as danceofdragons_views_dashboardrelationships
+from rpgine_comapp_danceofdragons.views.DashboardPinboardView import DashboardPinboardView as danceofdragons_views_dashboardpinboard
+from rpgine_comapp_danceofdragons.views.DashboardMapsView import DashboardMapsView as danceofdragons_views_dashboardmaps
 
 urlpatterns = [
     url(
@@ -49,19 +55,54 @@ urlpatterns = [
         name="dashboard"
     ),
     url(
-        regex=r'^dance-of-dragons/contested-rolls/',
+        regex=r'^dance-of-dragons/dice-roller/',
         view=danceofdragons_views_dashboarddiceroller.as_view(),
         name="simple-rolls"
     ),
     url(
-        regex=r'^dance-of-dragons/contested-rolls/',
+        regex=r'^dance-of-dragons/dice-roller/contested-rolls/',
+        view=danceofdragons_views_dashboarddiceroller.as_view(),
+        name="simple-rolls"
+    ),
+    url(
+        regex=r'^dance-of-dragons/dice-roller/contested-rolls/',
         view=danceofdragons_views_dashboarddiceroller.as_view(),
         name="extended-rolls"
     ),
     url(
-        regex=r'^dance-of-dragons/contested-rolls/',
+        regex=r'^dance-of-dragons/dice-roller/contested-rolls/',
         view=danceofdragons_views_dashboarddiceroller.as_view(),
         name="contested-rolls"
+    ),
+    url(
+        regex=r'^dance-of-dragons/fighting/',
+        view=danceofdragons_views_dashboardfighting.as_view(),
+        name="fighting"
+    ),
+    url(
+        regex=r'^dance-of-dragons/economy/',
+        view=danceofdragons_views_dashboardeconomy.as_view(),
+        name="economy"
+    ),
+    url(
+        regex=r'^dance-of-dragons/espionage/',
+        view=danceofdragons_views_dashboardespionage.as_view(),
+        name="espionage"
+    ),
+    url(
+        regex=r'^dance-of-dragons/relationships/',
+        view=danceofdragons_views_dashboardrelationships.as_view(),
+        name="fighting"
+    ),
+    url(
+        regex=r'^dance-of-dragons/pinboard/',
+        view=danceofdragons_views_dashboardpinboard.as_view(),
+        name="economy"
+    ),
+    url(
+        regex=r'^dance-of-dragons/maps/',
+        view=danceofdragons_views_dashboardmaps.as_view(),
+        name="espionage"
     ),
     url(
         regex=r'^admin/',
@@ -69,38 +110,3 @@ urlpatterns = [
         name="admin"
     ),
 ]
-
-"""
-    url(
-        regex=r'^login/',
-        view=rpginecore_views_login.as_view(),
-        name="admin"
-    ),
-    url(
-        regex=r'^logout/',
-        view=rpginecore_views_logout.as_view(),
-        name="admin"
-    ),
-
-
-    url(
-        regex=r'^login/',
-        view=include(auth_views.login, {'template_name': 'login.html'}),
-        name="admin"
-    ),
-    url(
-        regex=r'^logout/',
-        view=include(auth_views.login, {'template_name': 'logout.html'}),
-        name="admin"
-    ),
-    url(
-        regex=r'^$',
-        view=core_views_dashboard.as_view(),
-        name="dashboard"
-    ),
-    url(
-        regex=r'^dashboard/',
-        view=core_views_dashboard.as_view(),
-        name="dashboard"
-    ),
-"""
