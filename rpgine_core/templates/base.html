@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>RPGine{% block head_title %}{% endblock %}</title>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"/>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"/>
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" integrity="sha384-8mpDLwonQZmbe+NSxlfP47bSD45JOenYvLLJIsxcV6t08mn9aapHSBlcjTlSv+rS" crossorigin="anonymous"></script>
 
     {% comment "CUSTOM HEAD JAVASCRIPT CDN CONTENT" %}{% endcomment %}
     {% block head_js_remote_cdn %}{% endblock %}
@@ -12,12 +12,12 @@
     {% comment "JAVASCRIPT CDN TO LOCAL FALLBACK TO ENABLE OFFLINE USAGE" %}{% endcomment %}
     <script>window.jQuery || document.write('<script src="{% load static %}{% static "scripts/libs/jquery-2.2.4.min.js" %}"><\/script>')</script>
     {% load static %}<script src="{% static "scripts/libs/jquery-2.2.4.min.js" %}"></script>
-    {% load static %}<script src="{% static "scripts/libs/bootstrap.min.js" %}"></script>
+    {% load static %}<script src="{% static "scripts/libs/bootstrap.js" %}"></script>
 
     {% comment "CUSTOM HEAD JAVASCRIPT LOCAL CONTENT" %}{% endcomment %}
     {% block head_js_local %}{% endblock %}
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" integrity="sha384-HIq10PGaFnYl5SaZKAWej6ppW5+ww1BD8PQ8JKkgMybhae9J2EqkxepdU36KMOFx" crossorigin="anonymous">
     {% load static %}<link rel="stylesheet" href="{% static "css/base.css" %}">
 
     {% comment "CUSTOM HEAD CSS CDN CONTENT" %}{% endcomment %}
@@ -31,7 +31,7 @@
 
                 if(bodyColor != 'rgb(51, 51, 51)')
                 {
-                    {% load static %}$("head").prepend('<link rel="stylesheet" href="{% static "css/libs/bootstrap.min.css" %}">');
+                    {% load static %}$("head").prepend('<link rel="stylesheet" href="{% static "css/libs/bootstrap.css" %}">');
                 }
             });
     </script>

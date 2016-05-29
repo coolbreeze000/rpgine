@@ -15,42 +15,14 @@
 {% endblock %}
 
 {% block body %}
-    {% if user.is_authenticated %}
-    <!-- top navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">RPGine</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="dropdown active">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% block body_navbar-nav_module_active %}Core{% endblock %}<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li class="{% if '/' or 'core' in request.path %}active{% endif %}"><a href="#">Core</a></li>
-            <li class="{% if 'dance-of-dragons' in request.path %}active{% endif %}"><a href="#">Dance of Dragons</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-          <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-      </form>
-          <li><a href="#"><span class="glyphicon glyphicon glyphicon-cog gi-1_5x"></span></a></li>
-          <li class="dropdown active">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><a href="#"><span class="glyphicon glyphicon-user gi-1_5x"></span></a></a>
-              <ul class="dropdown-menu">
-                <li class=""><a href="{% url 'logout' %}">Logout</a></li>
-              </ul>
-          </li>
-      </ul>
-    </div>
+<!-- top navbar -->
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+    <div class="nav navbar-nav">
+        <li class="nav-item"><a class="navbar-brand" href="#">RPGine</a></li>
+        <li class="nav-item"><a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-item nav-link" href="#">Features</a></li>
+        <li class="nav-item"><a class="nav-item nav-link" href="#">Pricing</a></li>
+        <li class="nav-item"><a class="nav-item nav-link" href="#">About</a></li>
   </div>
 </nav>
 
@@ -106,22 +78,8 @@
 
     </div>
     <!-- /#wrapper -->
-
-
-
-
-<!--
-    <ul class="nav nav-tabs nav-stacked">
-        <li role="presentation" class="active"><a href="#">Home</a></li>
-        <li role="presentation"><a href="#">Profile</a></li>
-        <li role="presentation"><a href="#">Messages</a></li>
-    </ul>
--->
     <br>
     <br>
     <br>
     <br>
-    {% else %}
-        <h1>NOT AUTHENTICATED</h1>
-    {% endif %}
 {% endblock %}
