@@ -1,9 +1,11 @@
 {% extends 'danceofdragons/dashboard.html' %}
 
 {% block tabbar %}
-    <li class="nav-item"><a class="nav-link{% if request.path == '/' or 'simple-rolls' in request.path %} active{% endif %}" href="{% url 'simple-rolls' %}">Simple Rolls</a></li>
-    <li class="nav-item"><a class="nav-link{% if 'extended-rolls' in request.path %} active{% endif %}" href="{% url 'extended-rolls' %}">Extended Rolls</a></li>
-    <li class="nav-item"><a class="nav-link{% if 'contested-rolls' in request.path %}active{% endif %}" href="{% url 'contested-rolls' %}">Contested Rolls</a></li>
+    <ul class="nav nav-tabs">
+        <li class="nav-item"><a class="nav-link{% if request.path == '/' or 'simple-rolls' in request.path %} active{% endif %}" href="{% url 'simple-rolls' %}">Simple Rolls</a></li>
+        <li class="nav-item"><a class="nav-link{% if 'extended-rolls' in request.path %} active{% endif %}" href="{% url 'extended-rolls' %}">Extended Rolls</a></li>
+        <li class="nav-item"><a class="nav-link{% if 'contested-rolls' in request.path %} active{% endif %}" href="{% url 'contested-rolls' %}">Contested Rolls</a></li>
+    </ul>
 {%  endblock %}
 
 {% block body_content %}

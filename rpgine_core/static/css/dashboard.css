@@ -4,3 +4,4 @@ body { padding-top: 70px; }
 .navbar > li > a:hover { color: #ffffff; background: rgba(255, 181, 101, 0.67); } /* not working */
 .bg-inverse { color: #eceeef; background-color: #222222; }
 .dropdown-divider { background-color: #e27713; }
+.tab-content { padding-top: 10px; }

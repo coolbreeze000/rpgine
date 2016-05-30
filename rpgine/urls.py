@@ -90,9 +90,24 @@ urlpatterns = [
         name="espionage"
     ),
     url(
-        regex=r'^dance-of-dragons/relationships/$',
-        view=danceofdragons_views_dashboardrelationships.as_view(),
-        name="fighting"
+        regex=r'^dance-of-dragons/fighting/$',
+        view=danceofdragons_views_dashboardfighting.as_view(),
+        name="character-fighting"
+    ),
+    url(
+        regex=r'^dance-of-dragons/fighting/character-fights$',
+        view=danceofdragons_views_dashboardfighting.as_view(),
+        name="character-fighting"
+    ),
+    url(
+        regex=r'^dance-of-dragons/fighting/tabletop-fights$',
+        view=danceofdragons_views_dashboardfighting.as_view(),
+        name="tabletop-fighting"
+    ),
+    url(
+        regex=r'^dance-of-dragons/fighting/siege-fights$',
+        view=danceofdragons_views_dashboardfighting.as_view(),
+        name="siege-fighting"
     ),
     url(
         regex=r'^dance-of-dragons/pinboard/$',
