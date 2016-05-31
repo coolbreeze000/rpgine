@@ -29,17 +29,18 @@ body {
     position: fixed;
     overflow-x: hidden;
     overflow-y: auto;
-  padding-right: 20px;
-  padding-left: 20px;
+    padding-right: 38px;
+    padding-left: 38px;
     margin-left: -16px;
 }
 
 .nav.nav-sidebar > li {
-    margin:0 0 10px 0;
+    margin:10px 0 18px 0;
 }
 
 .nav.nav-sidebar > li > a {
     color: #e27713;
+    font-weight: bold;
 }
 
 .nav.nav-sidebar> .active > a:hover {
