@@ -2,10 +2,13 @@
  * Created by Dominik on 25.05.2016.
  */
 
-$(function(){
-    $(".dropdown-menu").on('click', 'li a', function(){
-      $(".btn:first-child").text($(this).text());
-      $(".btn:first-child").val($(this).text());
-   });
+console.log("JQUERY")
 
+$( document ).ready(function() {
+    $("div#split-bar").on("click",function(e){
+        e.preventDefault()
+        console.log("CLICKED!")
+        $("div#sidebar-wrapper").hide();
+        $("div#split-bar").show();
+    });
 });
