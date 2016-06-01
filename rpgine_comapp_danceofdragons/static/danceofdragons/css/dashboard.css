@@ -18,9 +18,7 @@ body {
 .dropdown-divider {
     background-color: #e27713;
 }
-.tab-content {
-    padding-top: 10px;
-}
+
 .nav.nav-sidebar {
     margin-top: -14px;
     color: #e27713;
@@ -32,6 +30,7 @@ body {
     padding-right: 38px;
     padding-left: 38px;
     margin-left: -16px;
+    z-index: 50;
 }
 
 .nav.nav-sidebar > li {
@@ -51,5 +50,33 @@ body {
 .page-content {
     width: 100%;
     position: absolute;
-    padding: 15px;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding-left: 40px;
+}
+
+.tab-content {
+    padding-top: 10px;
+}
+
+.tab-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 10px 10px 10px 10px;
+}
+
+#split-bar-sidebar {
+    cursor:e-resize;
+    position: absolute;
+    margin-top: -14px;
+    margin-left: 160px;
+    height: 60px;
+    width: 6px;
+    background-color: #e27713;
+    z-index: 100;
 }
