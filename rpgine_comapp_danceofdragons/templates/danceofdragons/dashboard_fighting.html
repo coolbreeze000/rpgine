@@ -1,14 +1,31 @@
 {% extends 'danceofdragons/dashboard.html' %}
+{% block head_js_local %}
+    {{ block.super }}
+    {% load static %}
+    <script src="{% static "danceofdragons/scripts/dashboard_fighting.js" %}"></script>
+{% endblock head_js_local %}
+{% block head_css_local %}
+    {{ block.super }}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "danceofdragons/css/dashboard_fighting.css" %}">
+{% endblock head_css_local %}
 
 {% block tabbar %}
     <ul class="nav nav-tabs">
-        <li class="nav-item"><a class="nav-link{% if request.path == '/' or 'character-fights' in request.path %} active{% endif %}" href="{% url 'character-fighting' %}">Character Fights</a></li>
-        <li class="nav-item"><a class="nav-link{% if 'tabletop-fights' in request.path %} active{% endif %}" href="{% url 'tabletop-fighting' %}">Tabletop Fights</a></li>
-        <li class="nav-item"><a class="nav-link{% if 'siege-fights' in request.path %} active{% endif %}" href="{% url 'siege-fighting' %}">Siege Fights</a></li>
+        <li class="nav-item"><a
+                class="nav-link{% if request.path == '/' or 'character-fights' in request.path %} active{% endif %}"
+                href="{% url 'character-fighting' %}">Character Fights</a></li>
+        <li class="nav-item"><a class="nav-link{% if 'tabletop-fights' in request.path %} active{% endif %}"
+                                href="{% url 'tabletop-fighting' %}">Tabletop Fights</a></li>
+        <li class="nav-item"><a class="nav-link{% if 'siege-fights' in request.path %} active{% endif %}"
+                                href="{% url 'siege-fighting' %}">Siege Fights</a></li>
     </ul>
-{%  endblock %}
+{% endblock tabbar %}
 
 {% block body_content %}
-    <h1>Fighting</h1>
-    <p>This page provides fighting!</p>
-{% endblock %}
+    <div id="split-bar-horizontal-top" class="split-bar-horizontal-top"></div>
+    <div id="headline"><h1>ASDFGH</h1></div>
+
+{% endblock body_content %}
+
+
