@@ -8,8 +8,6 @@ function dice_initialize(container) {
     canvas.style.height = window.innerHeight - 1 + 'px';
     var label = $t.id('label');
     var set = $t.id('set');
-    var selector_div = $t.id('selector_div');
-    var info_div = $t.id('info_div');
     on_set_change();
 
     $t.dice.use_true_random = false;
@@ -36,19 +34,12 @@ function dice_initialize(container) {
         box.reinit(canvas, { w: 500, h: 300 });
     });
 
-    function show_selector() {
-        info_div.style.display = 'none';
-        selector_div.style.display = 'inline-block';
-        box.draw_selector();
-    }
-
     function before_roll(vectors, notation, callback) {
-        info_div.style.display = 'none';
-        selector_div.style.display = 'none';
         // do here rpc call or whatever to get your own result of throw.
         // then callback with array of your result, example:
         // callback([2, 2, 2, 2]); // for 4d6 where all dice values are 2.
-        callback();
+        //callback();
+        callback([1, 2, 3, 4]);
     }
 
     function notation_getter() {
@@ -61,7 +52,6 @@ function dice_initialize(container) {
         if (result.length > 1) res += ' = ' +
                 (result.reduce(function(s, a) { return s + a; }) + notation.constant);
         label.innerHTML = res;
-        info_div.style.display = 'inline-block';
     }
 
     box.bind_mouse(container, notation_getter, before_roll, after_roll);
@@ -69,11 +59,6 @@ function dice_initialize(container) {
 
     $t.bind(container, ['mouseup'], function(ev) {
         ev.stopPropagation();
-        if (selector_div.style.display == 'none') {
-            if (!box.rolling) show_selector();
-            box.rolling = false;
-            return;
-        }
         var name = box.search_dice_by_mouse(ev);
         if (name != undefined) {
             var notation = $t.dice.parse_notation(set.value);
@@ -89,8 +74,5 @@ function dice_initialize(container) {
     }
     if (params.roll) {
         $t.raise_event($t.id('throw'), 'mouseup');
-    }
-    else {
-        show_selector();
     }
 }
