@@ -29,4 +29,26 @@ https://raw.githubusercontent.com/enyo/dropzone/master/dist/dropzone.js
             <input name="file" type="file" multiple />
         </div>
     </form>
+
+    <!--Copy from dashboard fighting fits better here-->
+    <head>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <style>
+            #resizable{height: 100%;width: 100%}
+            .ui-resizable-helper { border: 1px dotted blue; }
+        </style>
+        <script>
+        $(function() {
+            var box = $("#resizable");
+            var pos = box.position();
+            box.resizable({animate:true});
+        });
+        </script>
+    </head>
+    <body>
+        <div id="resizable" class="ui-widget-content"></div>
+    </body>
 {% endblock %}
