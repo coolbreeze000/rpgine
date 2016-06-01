@@ -42,41 +42,43 @@ body {
     font-weight: bold;
 }
 
-.nav.nav-sidebar> .active > a:hover {
+.nav.nav-sidebar> li:hover {
     color: #ffffff;
-    background-color: #428bca;
+    background-color: rgba(226, 119, 19, 0.2);
 }
 
-.page-content {
-    width: 100%;
-    position: absolute;
-    padding-top: 5px;
-    padding-left: 10px;
+.nav.nav-sidebar> li > a:hover {
+    color: #ffffff;
 }
 
 .page-content-wrapper {
     width: 100%;
-    position: absolute;
-    padding-left: 40px;
+    position: relative;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.page-content {
+    width: 100%;
+    position: relative;
+}
+
+.tab-content-wrapper {
+    width: 100%;
+    padding-top: 10px;
 }
 
 .tab-content {
     padding-top: 10px;
 }
 
-.tab-content-wrapper {
-    width: 100%;
-    position: absolute;
-    padding: 10px 10px 10px 10px;
-}
-
 #split-bar-sidebar {
     cursor:e-resize;
-    position: absolute;
+    position: fixed;
     margin-top: -14px;
     margin-left: 160px;
-    height: 60px;
+    height: 100vh;
     width: 6px;
-    background-color: #e27713;
+    background-color: #000000;
     z-index: 100;
 }

@@ -14,9 +14,19 @@ $(document).ready(function() {
         }
         else
         {
-            $("#split-bar-sidebar").css({"margin-left":"-10px"});
+            $("#split-bar-sidebar").css({"margin-left":"-15px"});
             $("#sidebar").css({"display":"none"});
             $("div#page-content-wrapper.page-content-wrapper").css({"padding-left":"-20px"});
         }
+    });
+
+    $("#navbar-settings-icon").on("mouseover",function(e) {
+        e.preventDefault();
+        $("#navbar-settings-icon").removeClass("fa fa-cog fa-2x fa-fw").addClass("fa fa-cog fa-spin fa-2x fa-fw");
+    });
+
+    $("#navbar-settings-icon").on("mouseleave",function(e) {
+        e.preventDefault();
+        $("#navbar-settings-icon").removeClass("fa fa-cog fa-spin fa-2x fa-fw").addClass("fa fa-cog fa-2x fa-fw");
     });
 });
