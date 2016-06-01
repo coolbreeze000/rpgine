@@ -21,6 +21,9 @@ from rpgine_core.views.LoginView import LoginView as rpginecore_views_login
 from rpgine_core.views.LogoutView import LogoutView as rpginecore_views_logout
 from rpgine_comapp_danceofdragons.views.DashboardView import DashboardView as danceofdragons_views_dashboard
 from rpgine_comapp_danceofdragons.views.DashboardDiceRollerView import DashboardDiceRollerView as danceofdragons_views_dashboarddiceroller
+from rpgine_comapp_danceofdragons.views.DashboardDiceRollerView import DashboardDiceRollerSimpleView as danceofdragons_views_dashboarddicerollersimple
+from rpgine_comapp_danceofdragons.views.DashboardDiceRollerView import DashboardDiceRollerExtendedView as danceofdragons_views_dashboarddicerollerextended
+from rpgine_comapp_danceofdragons.views.DashboardDiceRollerView import DashboardDiceRollerContestedView as danceofdragons_views_dashboarddicerollercontested
 from rpgine_comapp_danceofdragons.views.DashboardFightingView import DashboardFightingView as danceofdragons_views_dashboardfighting
 from rpgine_comapp_danceofdragons.views.DashboardEconomyView import DashboardEconomyView as danceofdragons_views_dashboardeconomy
 from rpgine_comapp_danceofdragons.views.DashboardEspionageView import DashboardEspionageView as danceofdragons_views_dashboardespionage
@@ -61,17 +64,17 @@ urlpatterns = [
     ),
     url(
         regex=r'^dance-of-dragons/dice-roller/simple-rolls/$',
-        view=danceofdragons_views_dashboarddiceroller.as_view(),
+        view=danceofdragons_views_dashboarddicerollersimple.as_view(),
         name="simple-rolls"
     ),
     url(
         regex=r'^dance-of-dragons/dice-roller/extended-rolls/$',
-        view=danceofdragons_views_dashboarddiceroller.as_view(),
+        view=danceofdragons_views_dashboarddicerollerextended.as_view(),
         name="extended-rolls"
     ),
     url(
         regex=r'^dance-of-dragons/dice-roller/contested-rolls/$',
-        view=danceofdragons_views_dashboarddiceroller.as_view(),
+        view=danceofdragons_views_dashboarddicerollercontested.as_view(),
         name="contested-rolls"
     ),
     url(
@@ -88,6 +91,11 @@ urlpatterns = [
         regex=r'^dance-of-dragons/espionage/$',
         view=danceofdragons_views_dashboardespionage.as_view(),
         name="espionage"
+    ),
+    url(
+        regex=r'^dance-of-dragons/relationships/$',
+        view=danceofdragons_views_dashboardrelationships.as_view(),
+        name="relationships"
     ),
     url(
         regex=r'^dance-of-dragons/fighting/$',

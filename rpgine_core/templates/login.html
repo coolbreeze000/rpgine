@@ -2,11 +2,11 @@
 
 {% block head_js_local %}
     {% load static %}<script src="{% static "scripts/login.js" %}"></script>
-{% endblock %}
+{% endblock head_js_local %}
 
 {% block head_css_local %}
     {% load static %}<link rel="stylesheet" href="{% static "css/login.css" %}">
-{% endblock %}
+{% endblock head_css_local %}
 
 {% load widget_tweaks %}
 
@@ -46,4 +46,4 @@
                 </div>
             </div>
     </section>
-{% endblock %}
+{% endblock body %}

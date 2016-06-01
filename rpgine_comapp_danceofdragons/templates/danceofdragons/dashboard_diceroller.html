@@ -15,12 +15,12 @@
     <script src="{% static "danceofdragons/scripts/libs/diceroller.js" %}"></script>
     {% load static %}
     <script src="{% static "danceofdragons/scripts/dashboard_diceroller.js" %}"></script>
-{% endblock %}
+{% endblock head_js_local %}
 
 {% block head_css_local %}
     {% load static %}
     <link rel="stylesheet" href="{% static "danceofdragons/css/dashboard.css" %}">
-{% endblock %}
+{% endblock head_css_local %}
 
 {% block tabbar %}
     <ul class="nav nav-tabs">
@@ -35,8 +35,12 @@
 {% endblock %}
 
 {% block body_content %}
-    <h1>Simple Rolls</h1>
-    <p>This page provides simple rolls!</p>
+    {% block body_content_social %}
+        <h1>Generic Rolls</h1>
+        <p>This page provides generic rolls!</p>
+    {% endblock body_content_social %}
+     {% block body_content_chat %}{% endblock body_content_chat %}
+    {% block body_content_lobby %}{% endblock body_content_lobby %}
     <span id="label"></span>
     <div class="center_field">
         {% csrf_token %}
@@ -48,5 +52,4 @@
     <script defer="defer">
         dice_initialize(document.body);
     </script>
-
-{% endblock %}
+{% endblock body_content %}

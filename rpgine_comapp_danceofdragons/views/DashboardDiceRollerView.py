@@ -13,18 +13,18 @@ class DashboardDiceRollerView(LoginRequiredMixin, TemplateView):
     redirect_field_name = 'redirect_to'
 
 class DashboardDiceRollerSimpleView(LoginRequiredMixin, TemplateView):
-    template_name = "danceofdragons/dashboard_diceroller.html"
+    template_name = "danceofdragons/dashboard_diceroller_simple.html"
     login_url = '/login/'
     redirect_field_name = 'redirect_to'
 
 class DashboardDiceRollerExtendedView(LoginRequiredMixin, TemplateView):
-    template_name = "danceofdragons/dashboard_diceroller.html"
+    template_name = "danceofdragons/dashboard_diceroller_extended.html"
     login_url = '/login/'
     redirect_field_name = 'redirect_to'
 
 
 class DashboardDiceRollerContestedView(LoginRequiredMixin, TemplateView):
-    template_name = "danceofdragons/dashboard_diceroller.html"
+    template_name = "danceofdragons/dashboard_diceroller_contested.html"
     login_url = '/login/'
     redirect_field_name = 'redirect_to'
 
