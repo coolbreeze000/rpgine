@@ -8,3 +8,8 @@
     <h1>Simple Rolls</h1>
     <p>This page provides simple rolls!</p>
 {% endblock body_content_social %}
+
+{% block breadcrumbs_fields %}
+    {{ block.super }}
+    <li class="breadcrumb-item active"><a href="{% url 'simple-rolls' %}">Simple Rolls</a></li>
+{% endblock breadcrumbs_fields %}

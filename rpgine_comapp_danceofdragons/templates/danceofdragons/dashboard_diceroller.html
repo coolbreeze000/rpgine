@@ -34,12 +34,18 @@
     </ul>
 {% endblock %}
 
+{% block breadcrumbs_fields %}
+    {{ block.super }}
+    <li class="breadcrumb-item"><a href="{% url 'simple-rolls' %}">Dice Roller</a></li>
+{% endblock breadcrumbs_fields %}
+
+
 {% block body_content %}
     {% block body_content_social %}
         <h1>Generic Rolls</h1>
         <p>This page provides generic rolls!</p>
     {% endblock body_content_social %}
-     {% block body_content_chat %}{% endblock body_content_chat %}
+    {% block body_content_chat %}{% endblock body_content_chat %}
     {% block body_content_lobby %}{% endblock body_content_lobby %}
     <span id="label"></span>
     <div class="center_field">

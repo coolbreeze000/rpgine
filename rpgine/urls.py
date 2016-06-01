@@ -120,12 +120,12 @@ urlpatterns = [
     url(
         regex=r'^dance-of-dragons/pinboard/$',
         view=danceofdragons_views_dashboardpinboard.as_view(),
-        name="economy"
+        name="pinboard"
     ),
     url(
         regex=r'^dance-of-dragons/maps/$',
         view=danceofdragons_views_dashboardmaps.as_view(),
-        name="espionage"
+        name="maps"
     ),
     url(
         regex=r'^admin/',

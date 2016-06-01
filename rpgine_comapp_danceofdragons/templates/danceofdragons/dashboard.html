@@ -12,14 +12,24 @@
 
 {% block body_navbar-nav_module_active %}Dance of Dragons{% endblock %}
 
+
+{% block breadcrumbs %}
+    <ol class="breadcrumb">
+        {% block breadcrumbs_fields %}
+            <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Dance of Dragons</a></li>
+        {% endblock breadcrumbs_fields %}
+    </ol>
+{% endblock breadcrumbs %}
+
+
 {% block sidebar %}
-    <li role="presentation" class="active"><a href="/dance-of-dragons/dice-roller">Dicer Roller</a></li>
-    <li role="presentation"><a href="/dance-of-dragons/fighting">Fighting</a></li>
-    <li role="presentation"><a href="/dance-of-dragons/economy">Economy</a></li>
-    <li role="presentation"><a href="/dance-of-dragons/espionage">Espionage</a></li>
-    <li role="presentation"><a href="/dance-of-dragons/relationships">Relationships</a></li>
-    <li role="presentation"><a href="/dance-of-dragons/pinboard">Pinboard</a></li>
-    <li role="presentation"><a href="/dance-of-dragons/maps">Maps</a></li>
+    <li role="presentation" class="active"><a href="{% url 'simple-rolls' %}">Dicer Roller</a></li>
+    <li role="presentation"><a href="{% url 'fighting' %}">Fighting</a></li>
+    <li role="presentation"><a href="{% url 'economy' %}">Economy</a></li>
+    <li role="presentation"><a href="{% url 'espionage' %}">Espionage</a></li>
+    <li role="presentation"><a href="{% url 'relationships' %}">Relationships</a></li>
+    <li role="presentation"><a href="{% url 'pinboard' %}">Pinboard</a></li>
+    <li role="presentation"><a href="{% url 'maps' %}">Maps</a></li>
 {% endblock sidebar %}
 
 {% block body_content %}
