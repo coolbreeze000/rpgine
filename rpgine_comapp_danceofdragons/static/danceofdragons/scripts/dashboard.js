@@ -58,11 +58,10 @@ $(document).ready(function() {
     $("a.nav-link").on("click",function(e){
         e.preventDefault();
         var link = document.location.origin + $(this).attr("href");
+        history.pushState({}, null, link);
         console.log(link);
         $.get(link, function(data) {
             var response = $('<div />').html(data).find('#page-content');
-            console.log(response.html());
-
             $("#page-content").html(response.html());
         });
     });

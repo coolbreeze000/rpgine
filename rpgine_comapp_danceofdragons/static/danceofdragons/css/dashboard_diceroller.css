@@ -1,0 +1,19 @@
+div.card.social-user {
+    width: 100px;
+    text-align: center;
+}
+
+div.social-user.image {
+    padding: 0px 0px 0px 0px;
+}
+
+div.social-user.label {
+    margin-top: -15px;
+}
+
+p.card-text.social-user.text {
+    display: block;
+    text-align: left;
+    width: 300px;
+    white-space: normal;
+}
