@@ -54,4 +54,16 @@ $(document).ready(function() {
         e.preventDefault();
         $("#navbar-settings-icon").removeClass("fa fa-cog fa-spin fa-2x fa-fw").addClass("fa fa-cog fa-2x fa-fw");
     });
+
+    $("a.nav-link").on("click",function(e){
+        e.preventDefault();
+        var link = document.location.origin + $(this).attr("href");
+        console.log(link);
+        $.get(link, function(data) {
+            var response = $('<div />').html(data).find('#page-content');
+            console.log(response.html());
+
+            $("#page-content").html(response.html());
+        });
+    });
 });
