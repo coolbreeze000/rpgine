@@ -3,6 +3,29 @@
  */
 
 $(document).ready(function() {
+    $("div.split-bar-horizontal-navbar").on("click",function(e){
+        e.preventDefault();
+
+        console.log("LOGGER");
+
+        if ($('#navbar').css('display') == 'none')
+        {
+            $("#navbar").css({"display":"initial"});
+            $("div.split-bar-horizontal-navbar").css({"margin-top":"-7px"});
+            $("#split-bar-sidebar").css({"margin-top":"-7px"});
+            $(".nav.nav-sidebar").css({"margin-top":"-7px"});
+            $("#page-content-wrapper").css({"margin-top":"10px"});
+        }
+        else
+        {
+            $("#navbar").css({"display":"none"});
+            $("div.split-bar-horizontal-navbar").css({"margin-top":"-70px"});
+            $("#split-bar-sidebar").css({"margin-top":"-100px","height":"120vh"});
+            $(".nav.nav-sidebar").css({"margin-top":"-70px"});
+            $("#page-content-wrapper").css({"margin-top":"-60px"});
+        }
+    });
+
     $("div.split-bar-sidebar").on("click",function(e){
         e.preventDefault();
 
@@ -10,13 +33,15 @@ $(document).ready(function() {
         {
             $("#split-bar-sidebar").css({"margin-left":"160px"});
             $("#sidebar").css({"display":"initial"});
-            $("div#page-content-wrapper.page-content-wrapper").css({"padding-left":"40px"});
+            $("div.split-bar-horizontal-navbar").css({"margin-left":"175px"});
+            $("#page-content-wrapper").css({"margin-left":"20px"});
         }
         else
         {
             $("#split-bar-sidebar").css({"margin-left":"-15px"});
             $("#sidebar").css({"display":"none"});
-            $("div#page-content-wrapper.page-content-wrapper").css({"padding-left":"-20px"});
+            $("div.split-bar-horizontal-navbar").css({"margin-left":"-20px","width":"120vw"});
+            $("#page-content-wrapper").css({"margin-left":"-180px"});
         }
     });
 

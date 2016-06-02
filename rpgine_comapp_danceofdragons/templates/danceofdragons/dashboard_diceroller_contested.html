@@ -1,5 +1,10 @@
 {% extends 'danceofdragons/dashboard_diceroller.html' %}
 
+{% block breadcrumbs_fields %}
+    {{ block.super }}
+    <li class="breadcrumb-item"><a href="{% url 'contested-rolls' %}">Contested Rolls</a></li>
+{% endblock breadcrumbs_fields %}
+
 {% block body_content_before_diceroller %}
     <h1>Contested Rolls</h1>
     <p>This page provides contested rolls!</p>

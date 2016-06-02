@@ -26,7 +26,7 @@ body {
 }
 
 .nav.nav-sidebar {
-    margin-top: -14px;
+    margin-top: -7px;
     color: #e27713;
     background: #222222;
     height: 100%;
@@ -81,7 +81,7 @@ body {
 #split-bar-sidebar {
     cursor: e-resize;
     position: fixed;
-    margin-top: -14px;
+    margin-top: -7px;
     margin-left: 160px;
     height: 100vh;
     width: 6px;
@@ -105,4 +105,17 @@ ol.breadcrumb > li {
 
 ol.breadcrumb > li > a {
 
+}
+
+.split-bar-horizontal-navbar {
+    overflow-x: visible;
+    overflow-y: visible;
+    cursor: n-resize;
+    position: fixed;
+    height: 6px;
+    margin-top: -7px;
+    margin-left: 175px;
+    width: 100%;
+    background-color: #000000;
+    z-index: 4000;
 }

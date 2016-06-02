@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="{% static "danceofdragons/css/dashboard_fighting.css" %}">
 {% endblock head_css_local %}
 
+{% block breadcrumbs_fields %}
+    {{ block.super }}
+    <li class="breadcrumb-item"><a href="{% url 'fighting' %}">Fighting</a></li>
+{% endblock breadcrumbs_fields %}
+
 {% block tabbar %}
     <ul class="nav nav-tabs">
         <li class="nav-item"><a

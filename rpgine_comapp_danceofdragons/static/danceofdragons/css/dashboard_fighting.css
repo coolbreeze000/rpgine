@@ -1,5 +1,5 @@
 .split-bar-horizontal-top {
-    cursor: e-resize;
+    cursor: n-resize;
     position: static;
     margin-top: 100px;
     height: 2px;
@@ -8,7 +8,7 @@
     z-index: 100;
 }
 .split-bar-horizontal-bottom {
-    cursor:e-resize;
+    cursor: n-resize;
     position: static;
     margin-bottom: 100px;
     height: 2px;

@@ -25,6 +25,9 @@ from rpgine_comapp_danceofdragons.views.DashboardDiceRollerView import Dashboard
 from rpgine_comapp_danceofdragons.views.DashboardDiceRollerView import DashboardDiceRollerExtendedView as danceofdragons_views_dashboarddicerollerextended
 from rpgine_comapp_danceofdragons.views.DashboardDiceRollerView import DashboardDiceRollerContestedView as danceofdragons_views_dashboarddicerollercontested
 from rpgine_comapp_danceofdragons.views.DashboardFightingView import DashboardFightingView as danceofdragons_views_dashboardfighting
+from rpgine_comapp_danceofdragons.views.DashboardFightingView import DashboardCharacterFightingView as danceofdragons_views_dashboardfightingcharacter
+from rpgine_comapp_danceofdragons.views.DashboardFightingView import DashboardTabletopFightingView as danceofdragons_views_dashboardfightingtabletop
+from rpgine_comapp_danceofdragons.views.DashboardFightingView import DashboardSiegeFightingView as danceofdragons_views_dashboardfightingsiege
 from rpgine_comapp_danceofdragons.views.DashboardEconomyView import DashboardEconomyView as danceofdragons_views_dashboardeconomy
 from rpgine_comapp_danceofdragons.views.DashboardEspionageView import DashboardEspionageView as danceofdragons_views_dashboardespionage
 from rpgine_comapp_danceofdragons.views.DashboardRelationshipsView import DashboardRelationshipsView as danceofdragons_views_dashboardrelationships
@@ -104,17 +107,17 @@ urlpatterns = [
     ),
     url(
         regex=r'^dance-of-dragons/fighting/character-fights$',
-        view=danceofdragons_views_dashboardfighting.as_view(),
+        view=danceofdragons_views_dashboardfightingcharacter.as_view(),
         name="character-fighting"
     ),
     url(
         regex=r'^dance-of-dragons/fighting/tabletop-fights$',
-        view=danceofdragons_views_dashboardfighting.as_view(),
+        view=danceofdragons_views_dashboardfightingtabletop.as_view(),
         name="tabletop-fighting"
     ),
     url(
         regex=r'^dance-of-dragons/fighting/siege-fights$',
-        view=danceofdragons_views_dashboardfighting.as_view(),
+        view=danceofdragons_views_dashboardfightingsiege.as_view(),
         name="siege-fighting"
     ),
     url(
