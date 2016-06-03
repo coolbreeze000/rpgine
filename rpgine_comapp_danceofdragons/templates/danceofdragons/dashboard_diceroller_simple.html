@@ -5,14 +5,12 @@
 {% endblock body_content %}
 
 {% block body_content_social %}
-    <div id="social-users-gamemasters">
-    </div>
-    <div id="social-users-privileged">
-    </div>
-    <div id="social-users-unprivileged">
-        <div class="card social-user">
+    <div class="social-bar users gamemasters" id="social-users-gamemasters">
+        <div class="card social-bar user gamemaster">
             <div class="social-user image">
-                <i class="fa fa-user fa-5x" aria-hidden="true"></i>
+                {% load static %}<img class="card-img-top"
+                                      src="{% static "danceofdragons/media/images/private/gamemaster.jpg" %}"
+                                      alt="Gamemaster">
             </div>
             <div class="social-user label">
                 <div class="card-block">
@@ -21,21 +19,186 @@
                 </div>
             </div>
         </div>
-
-        <i class="fa fa-user fa-5x" aria-hidden="true"></i>
-        <i class="fa fa-user fa-5x" aria-hidden="true"></i>
-        <i class="fa fa-user fa-5x" aria-hidden="true"></i>
     </div>
-    <div id="social-npcs-public">
+    <div class="social-bar users privileged" id="social-users privileged">
+        <div class="card social-bar user privileged">
+            <div class="social-user image">
+                {% load static %}<img class="card-img-top"
+                                      src="{% static "danceofdragons/media/images/private/Kommandant Nelia Himmelsstein.JPG" %}"
+                                      alt="Kommandant Nelia Himmelsstein">
+            </div>
+            <div class="social-user label">
+                <div class="card-block">
+                    <p class="card-text social-user text">Alexander</p>
+                    <p class="card-text social-user text">Privileged User</p>
+                </div>
+            </div>
+        </div>
+        <div class="card social-bar user privileged">
+            <div class="social-user image">
+                {% load static %}<img class="card-img-top"
+                                      src="{% static "danceofdragons/media/images/private/Der Titan.JPG" %}"
+                                      alt="Der Titan">
+            </div>
+            <div class="social-user label">
+                <div class="card-block">
+                    <p class="card-text social-user text">Alexander</p>
+                    <p class="card-text social-user text">Privileged User</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="social-npcs-private">
+    <div class="social-bar users unprivileged" id="social-users unprivileged">
+        <div class="card social-bar user unprivileged">
+            <div class="social-user image">
+                {% load static %}<img class="card-img-top"
+                                      src="{% static "danceofdragons/media/images/private/Lord Cryus Himmelsstein.jpg" %}"
+                                      alt="Der Titan">
+            </div>
+            <div class="social-user label">
+                <div class="card-block">
+                    <p class="card-text social-user text">Lord Cryus Varn Himmelsstein</p>
+                    <p class="card-text social-user text">Unprivileged User</p>
+                </div>
+            </div>
+        </div>
+        <div class="card social-bar user unprivileged">
+            <div class="social-user image">
+                {% load static %}<img class="card-img-top"
+                                      src="{% static "danceofdragons/media/images/private/Prinzessin Lycinda Visenya Himmelsstein.JPG" %}"
+                                      alt="Der Titan">
+            </div>
+            <div class="social-user label">
+                <div class="card-block">
+                    <p class="card-text social-user text">Prinzessin Lycinda Visenya Himmelsstein</p>
+                    <p class="card-text social-user text">Unprivileged User</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <i class="fa fa-user-secret fa-5x" aria-hidden="true"></i>
-    <i class="fa fa-user-secret fa-5x" aria-hidden="true"></i>
-    <i class="fa fa-user-secret fa-5x" aria-hidden="true"></i>
-    <i class="fa fa-user-secret fa-5x" aria-hidden="true"></i>
-    <i class="fa fa-user-secret fa-5x" aria-hidden="true"></i>
-    <i class="fa fa-user-secret fa-5x" aria-hidden="true"></i>
+    <div class="card social-bar user unprivileged">
+        <div class="social-user image">
+            {% load static %}<img class="card-img-top"
+                                  src="{% static "danceofdragons/media/images/private/Maester Lucius.JPG" %}"
+                                  alt="Der Titan">
+        </div>
+        <div class="social-user label">
+            <div class="card-block">
+                <p class="card-text social-user text">Maester Lucius</p>
+                <p class="card-text social-user text">Unprivileged User</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="card social-bar user unprivileged">
+        <div class="social-user image">
+            {% load static %}<img class="card-img-top"
+                                  src="{% static "danceofdragons/media/images/private/Septon Derren.jpg" %}"
+                                  alt="Der Titan">
+        </div>
+        <div class="social-user label">
+            <div class="card-block">
+                <p class="card-text social-user text">Septon Derren</p>
+                <p class="card-text social-user text">Unprivileged User</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="social-bar npcs public" id="social-npcs public">
+        <div class="card social-bar npc private">
+            <div class="social-user image">
+                {% load static %}<img class="card-img-top"
+                                      src="{% static "danceofdragons/media/images/private/hogger.jpg" %}"
+                                      alt="Hogger">
+            </div>
+            <div class="social-user label">
+                <div class="card-block">
+                    <p class="card-text social-user text">Hogger</p>
+                    <p class="card-text social-user text">Public NPC</p>
+                </div>
+            </div>
+        </div>
+        <div class="card social-bar npc private">
+            <div class="social-user image">
+                {% load static %}<img class="card-img-top"
+                                      src="{% static "danceofdragons/media/images/private/onyxia.jpg" %}"
+                                      alt="Onyxia">
+            </div>
+            <div class="social-user label">
+                <div class="card-block">
+                    <p class="card-text social-user text">Onyxia</p>
+                    <p class="card-text social-user text">Public NPC</p>
+                </div>
+            </div>
+        </div>
+        <div class="card social-bar npc private">
+            <div class="social-user image">
+                {% load static %}<img class="card-img-top"
+                                      src="{% static "danceofdragons/media/images/private/Sauron.png" %}"
+                                      alt="Sauron">
+            </div>
+            <div class="social-user label">
+                <div class="card-block">
+                    <p class="card-text social-user text">Sauron</p>
+                    <p class="card-text social-user text">Public NPC</p>
+                </div>
+            </div>
+        </div>
+        <div class="card social-bar npc private">
+            <div class="social-user image">
+                {% load static %}<img class="card-img-top"
+                                      src="{% static "danceofdragons/media/images/private/Generic Archer.png" %}"
+                                      alt="Generic Archer">
+            </div>
+            <div class="social-user label">
+                <div class="card-block">
+                    <p class="card-text social-user text">5x Archers</p>
+                    <p class="card-text social-user text">Public NPC</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="social-bar npcs private" id="social-npcs private">
+        <div class="card social-bar npc private">
+            <div class="social-user image">
+                {% load static %}<img class="card-img-top"
+                                      src="{% static "danceofdragons/media/images/private/Forrest Gump.jpg" %}"
+                                      alt="Forrest Gump">
+            </div>
+            <div class="social-user label">
+                <div class="card-block">
+                    <p class="card-text social-user text">Forrest Gump</p>
+                    <p class="card-text social-user text">Private NPC</p>
+                </div>
+            </div>
+        </div>
+        <div class="card social-bar npc private">
+            <div class="social-user image">
+                {% load static %}<img class="card-img-top"
+                                      src="{% static "danceofdragons/media/images/private/Mysterious Vault Boy.JPG" %}"
+                                      alt="Forrest Gump">
+            </div>
+            <div class="social-user label">
+                <div class="card-block">
+                    <p class="card-text social-user text">Mysterious Vault Boy</p>
+                    <p class="card-text social-user text">Private NPC</p>
+                </div>
+            </div>
+        </div>
+        <div class="card social-bar npc private">
+            <div class="social-user image">
+                {% load static %}<img class="card-img-top"
+                                      src="{% static "danceofdragons/media/images/private/Saurons Eye.jpg" %}"
+                                      alt="Forrest Gump">
+            </div>
+            <div class="social-user label">
+                <div class="card-block">
+                    <p class="card-text social-user text">Sauron's Eye</p>
+                    <p class="card-text social-user text">Private NPC</p>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock body_content_social %}
 
 {% block breadcrumbs_fields %}

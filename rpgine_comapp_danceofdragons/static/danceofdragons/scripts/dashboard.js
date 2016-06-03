@@ -65,7 +65,7 @@ $(document).ready(function() {
             $("#page-content").html(response.html());
         });
     });
-
+    
     $("#page-content").on('click', 'a.nav-link', function(e) {
         e.preventDefault();
         var link = document.location.origin + $(this).attr("href");
