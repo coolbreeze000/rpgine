@@ -42,21 +42,31 @@
 
 
 {% block body_content %}
-    {% block body_content_social %}
-        <h1>Generic Rolls</h1>
-        <p>This page provides generic rolls!</p>
-    {% endblock body_content_social %}
-    {% block body_content_chat %}{% endblock body_content_chat %}
-    {% block body_content_lobby %}{% endblock body_content_lobby %}
-    <span id="label"></span>
-    <div class="center_field">
-        {% csrf_token %}
-        <input type="text" id="set" value="10d10"/><br/>
-        <button id="clear">clear</button>
-        <button style="margin-left: 0.6em" id="throw">throw</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+                {% block body_content_social %}
+                    <h1>Generic Rolls</h1>
+                    <p>This page provides generic rolls!</p>
+                {% endblock body_content_social %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1 col-sm-1 col-lg-1">
+                {% block body_content_chat %}{% endblock body_content_chat %}
+                {% block body_content_lobby %}{% endblock body_content_lobby %}
+                <span id="label"></span>
+                <div class="center_field">
+                    {% csrf_token %}
+                    <input type="text" id="set" value="10d10"/><br/>
+                    <button id="clear">clear</button>
+                    <button style="margin-left: 0.6em" id="throw">throw</button>
+                </div>
+                <div id="canvas"></div>
+                <script defer="defer">
+                    dice_initialize(document.body);
+                </script>
+            </div>
+        </div>
     </div>
-    <div id="canvas"></div>
-    <script defer="defer">
-        dice_initialize(document.body);
-    </script>
 {% endblock body_content %}

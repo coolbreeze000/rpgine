@@ -6,22 +6,20 @@ div.social-user {
     position: relative;
 }
 
-div.card.social-bar {
-    text-align: center;
-    width: 10px;
-    max-width: 10px;
+div.card.socialbar {
+    background-color: #2b542c;
 }
 
 div[class^="card social-bar "] {
-    width: 10px;
-    height: 500px;
+
 }
 
 div[class^="social-user image"] {
     text-align: center;
-    margin-left: 500px;
-    max-width: 100%;
-    max-height: 100%;
+}
+
+div[class^="social-user label"] {
+    text-align: center;
 }
 
 image.card-img-top {
