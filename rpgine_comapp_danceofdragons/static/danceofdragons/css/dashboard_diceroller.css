@@ -6,8 +6,10 @@ div.social-user {
     position: relative;
 }
 
-div.card.socialbar {
+#socialcardbar {
     background-color: #2b542c;
+    overflow-x: scroll;
+    width: 100%;
 }
 
 div[class^="card social-bar "] {
