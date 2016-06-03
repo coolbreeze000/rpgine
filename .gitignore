@@ -65,5 +65,8 @@ rpgine_core/conf/*
 # LOCAL DJANGO DEFAULT DATABASE
 db.sqlite3
 
+# PRIVATE IMAGES
+rpgine_comapp_danceofdragons/static/danceofdragons/media/images/private/*
+
 # PRIVATE MAPS
 rpgine_comapp_danceofdragons/static/danceofdragons/media/maps/private/*
