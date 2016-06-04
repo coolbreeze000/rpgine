@@ -210,10 +210,12 @@
             <button id="clear">clear</button>
             <button style="margin-left: 0.6em" id="throw">throw</button>
         </div>
-        <div id="canvas"></div>
-        <script defer="defer">
-            dice_initialize(document.body);
-        </script>
+        <div id="diceroller">
+            <div id="canvas"></div>
+            <script defer="defer">
+                dice_initialize(document.getElementById("diceroller"));
+            </script>
+        </div>
     </div>
 {% endblock body_content_content %}
 

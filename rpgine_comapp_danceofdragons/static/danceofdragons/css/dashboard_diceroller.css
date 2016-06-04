@@ -33,3 +33,8 @@ img[class^="socialimage"] {
     height: 100%;
     object-fit: contain;
 }
+
+#diceroller {
+    width: 100px;
+    height: 100px;
+}
