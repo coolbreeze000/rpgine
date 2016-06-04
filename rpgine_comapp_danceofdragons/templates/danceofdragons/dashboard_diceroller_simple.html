@@ -9,7 +9,7 @@
         <div class="social-bar users gamemasters" id="social-users-gamemasters">
             <div class="card social-bar user gamemaster">
                 <div class="social-user image">
-                    {% load static %}<img class="img-responsive img-rounded"
+                    {% load static %}<img class="socialimage img-responsive img-rounded"
                                           src="{% static "danceofdragons/media/images/private/gamemaster.jpg" %}"
                                           alt="Gamemaster">
                 </div>
@@ -200,6 +200,22 @@
         </div>
     </div>
 {% endblock body_content_social %}
+
+{% block body_content_content %}
+    <div id="contentcard" class="card">
+        <span id="label"></span>
+        <div class="center_field">
+            {% csrf_token %}
+            <input type="text" id="set" value="10d10"/><br/>
+            <button id="clear">clear</button>
+            <button style="margin-left: 0.6em" id="throw">throw</button>
+        </div>
+        <div id="canvas"></div>
+        <script defer="defer">
+            dice_initialize(document.body);
+        </script>
+    </div>
+{% endblock body_content_content %}
 
 {% block breadcrumbs_fields %}
     {{ block.super }}
