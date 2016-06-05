@@ -25,7 +25,7 @@
                        aria-haspopup="true"
                        aria-expanded="false">{% block body_navbar-nav_module_active %}Core{% endblock %}</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item{% if '/' or 'core' in request.path %} active{% endif %}"
+                        <a class="dropdown-item{% if 'core' in request.path %} active{% endif %}"
                            href="#">Core</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item{% if 'dance-of-dragons' in request.path %} active{% endif %}" href="#">Dance
