@@ -17,3 +17,7 @@ class RandomNumberGenerator:
 
     def generateTrueRandomInteger(self, start: int, stop: int):
         return self.sysrandom.randint(start, stop)
+
+    def generateTrueRandomIntegerFromValues(self, values):
+        rindex = self.generateTrueRandomInteger(0, len(values)-1)
+        return values[rindex]
