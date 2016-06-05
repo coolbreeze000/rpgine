@@ -3,7 +3,7 @@ body {
 }
 
 .navbar-nav > li > .dropdown-menu {
-    background-color: #222222;
+    background-color: #393939;
     z-index: 150;
 }
 
