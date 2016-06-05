@@ -1,10 +1,14 @@
 #socialcardbar {
-    overflow-x: scroll;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     width: auto;
     height: 100px;
     position: relative;
+}
+
+#socialcardbar:hover {
+    overflow-x: scroll;
 }
 
 div[class^="card social-bar "] {
