@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('img[class^="social-image"]').on("dragstart", function (e) {
+    $("#page-content").on('dragstart', 'img[class^="social-image"]', function(e) {
         e.preventDefault();
     });
 });
