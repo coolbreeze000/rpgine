@@ -19,3 +19,5 @@ while(True):
 
     if debug == False:
         print(status)
+
+#TEST
