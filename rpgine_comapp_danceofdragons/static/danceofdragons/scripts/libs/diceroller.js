@@ -3,9 +3,11 @@
 function dice_initialize(container) {
     $t.remove($t.id('loading_text'));
 
-    var canvas = $t.id('canvas');
-    canvas.style.width = window.innerWidth - 1 + 'px';
-    canvas.style.height = window.innerHeight - 1 + 'px';
+    var canvas = $t.id('diceroller-canvas');
+    //canvas.style.width = window.innerWidth - 1 + 'px';
+    //canvas.style.height = window.innerHeight - 1 + 'px';
+    canvas.style.width = $("#diceroller").width;
+    canvas.style.height = $("#diceroller").height;
     var label = $t.id('label');
     var set = $t.id('set');
     on_set_change();

@@ -23,7 +23,7 @@
 
 
 {% block sidebar %}
-    <li role="presentation" class="{% if request.path == 'dice-roller' in request.path %}active{% endif %}"><a class="nav-link" href="{% url 'simple-rolls' %}">Dicer Roller</a></li>
+    <li role="presentation" class="{% if request.path == 'dice-roller' in request.path %}active{% endif %}"><a class="nav-link" href="{% url 'simple-rolls' %}">Dice Roller</a></li>
     <li role="presentation" class="{% if request.path == 'dice-roller' in request.path %}active{% endif %}"><a class="nav-link{% if request.path == 'fighting' in request.path %} active{% endif %}" href="{% url 'fighting' %}">Fighting</a></li>
     <li role="presentation" class="{% if request.path == 'dice-roller' in request.path %}active{% endif %}"><a class="nav-link{% if request.path == 'economy' in request.path %} active{% endif %}" href="{% url 'economy' %}">Economy</a></li>
     <li role="presentation" class="{% if request.path == 'dice-roller' in request.path %}active{% endif %}"><a class="nav-link{% if request.path == 'espionage' in request.path %} active{% endif %}" href="{% url 'espionage' %}">Espionage</a></li>
