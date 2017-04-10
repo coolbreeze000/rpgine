@@ -1,0 +1,232 @@
+---
+# character in the dance of dragons universe
+name: Billibald Aescheli
+nicknames: ?
+titles: Prinz, Lord
+age: 16 Jahre (113 AL geb.)
+affiliation: Haus Aescheli
+status: Am Leben
+short_description: -
+actor: Sean Astin (Sam in Herr der Ringe)
+player: Sascha
+character_traits:
+  - moral: 8
+    description: -
+  - tugend: Hoffnung 2
+    description: -
+  - laster: Neugier 3
+    description: -
+  - goal: Liebe (Love)
+    description: -
+  - motivation: Akzeptanz (Approval)
+    description: -
+  - nature: Abenteuerlustiger (Thrill-Seeker)
+    description: -
+  - demeanor: Phantast (Visionary)
+    description: -
+aspects:
+  - first_aspect: -
+    description: -
+  - second_aspect: -
+    description: -
+function_values:
+  social_status: 3
+  willpower: ?
+  health: ?
+  ausdauer: ?
+  initiative: ?
+  defensive: ?
+  ausweichen: ?
+  geschwindigkeit: ?
+  fernkampf: ?
+  attacke: ?
+  parade: ?
+  armor: 1 (Lederwams - Leichte Rüstung)
+attributes:
+  - attributes:
+    - physical:
+      strength: 2
+      gewandheit: 2
+      fingerfertigkeit: 3
+      constitution: 3
+    - social:
+      charisma: 3
+      manipulation: 2
+      intution: 4 (Einfühlungsvermögen)
+      fassung: 2
+    - mental:
+      intelligence: 3 (Phantasie)
+      wits: 2
+      perception: 2
+      entschlossenheit: 2
+skills:
+  - physical:
+    acrobatics: -
+    athletics: 0
+    diebstahl: -
+    flying: -
+    gaukeleien: 0
+    heimlichkeit: 1 (Verstecken)
+    climbing: 2
+    magiegespuer: -
+    riding: 1
+    swimming: 0
+    singing: 2
+    sinnenschaerfe: 2
+    skiing: -
+    stimmen_imitieren: 0
+    dancing: 1 (Höfische Tänze)
+    zechen: 2
+  - gesellschaftlich:
+    betoeren_und_verfuehren: 0
+    intimidation: 0
+    etiquette: 2
+    galanterie: -
+    informationsbeschaffung: 0
+    inquisition: -
+    kommandieren: -
+    teaching: 0
+    menschenkenntnis: 2
+    acting: -
+    written_expression: 0
+    socialising: 2
+    staatskunst: 1
+    deception: 0
+    ueberreden: 2
+    ueberzeugen: 2
+    verkleiden: -
+  - natur:
+    fallenstellen: 0
+    fesseln_und_entfesseln: 0
+    faehrtensuchen: 1
+    orientation: 0
+    wettervorhersage: 0
+    wildlife: 0
+  - jagen_und_sammeln:
+    ansitzjagd: ?
+    hetzjagd: ?
+    kraeuter_suchen: ?
+    nahrung_sammeln: ?
+    pirschjagd: ?
+    fischen_und_angeln: 0
+    seefischerei: -
+  - wissen:
+    Alchemiekunde -
+    Anatomie -
+    Architektur -
+    Brett & Glücksspiel 2
+    Gassenwissen -
+    Geographie 1
+    Geschichtswissen 1
+    Gesteinskunde -
+    Giftkunde -
+    Götter & Kulte 1
+    Handelskunst -
+    Heraldik 1
+    Hüttenkunde -
+    Investigation -
+    Krankheitenlehre -
+    Kriegskunst -
+    Kryptographie -
+    Magiekunde -
+    Mechanik -
+    Musiklehre -
+    Navigation -
+    Ofenweisheit 3
+    Pflanzenkunde 1
+    Philosophie -
+    Rechnen 0
+    Rechtskunde 1
+    Sagen und Legenden 2
+    Schätzen -
+    Schauspielkunde -
+    Seelsorgenlehre -
+    Schiffbau -
+    Sphärenkunde -
+    Sprachenkunde -
+    Staatskunde 1
+    Sternkunde -
+    Tierkunde 2
+    Wundlehre -
+  - sprachen_und_schriften:
+    - first_language: Allgemeine Zunge
+      sprechen: 2
+    - lesen_und_Schreiben: 1
+  - handwerk:
+    Abrichten -
+    Ackerbau -
+    Alchemie -
+    Baukunst -
+    Bergbau -
+    Bogenbau -
+    Boote Fahren -
+    Brauen & Brennen -
+    Eissegler Fahren -
+    Fahrzeug Lenken -
+    Falschspiel -
+    Feinmechanik -
+    Feuersteinbearbeitung -
+    Glaskunst -
+    Handel -
+    Hauswirtschaft 1
+    Heilkunde Gift -
+    Heilkunde Krankheiten -
+    Heilkunde Seele -
+    Heilkunde Wunden -
+    Holzbearbeitung 0
+    Hundeschlitten Fahren -
+    Kartographie -
+    Kochen 0
+    Kristallzucht -
+    Lederarbeiten 0
+    Malen und Zeichnen 2
+    Metallguss -
+    Musizieren -
+    Schlösser Knacken -
+    Schmiedekunst -
+    Seefahrt -
+    Steinbearbeitung -
+    Stoffbearbeitung 0
+    Tätowieren -
+    Töpfern -
+    Verhüttung -
+    Viehzucht 1
+  - kampftechniken:
+    - bewaffneter_nahkampf:
+      Anderthalbhänder -
+      Dolche 1
+      Fechtwaffen -
+      Hiebwaffen 0
+      Infanteriewaffen -
+      Kettenstäbe -
+      Kettenwaffen -
+      Säbel -
+      Schwerter 0
+      Speere 0
+      Stäbe -
+      Zweihandflegel -
+      Zweihandhiebwaffen -
+      Zweihandkettenwaffen -
+      Zweihandschwerter -
+      Zweihandsäbel -
+    - unbewaffneter_nahkampf:
+      Raufen 0
+      Ringen 0
+    - fernkampf:
+      Armbrust 1
+      Bogen -
+      Schleuder -
+      Wurfbeile -
+      Wurfmesser 0
+      Wurfspeere -
+    - spezialkampftalente:
+      Belagerungswaffen -
+      Berittener Kampf -
+      Schild -
+    - exotische_waffen:
+      Blasrohr -
+      Diskus -
+      Klingenwaffen -
+      Peitsche -
+      Bastardstäbe -
+...
